@@ -233,7 +233,7 @@ def get_sorted_cosine_similarity(embeddings_metadata):
         # TODO: Update category embeddings if category not found
         ##########################################
         category_embedding = category_embeddings[index]
-        cosine_sim[categories[index]] = cosine_similarity(input_embedding, category_embedding)`
+        cosine_sim[categories[index]] = cosine_similarity(input_embedding, category_embedding)
     
     # Sort cosine similarities in descending order
     sorted_cosine_sim = sorted(cosine_sim.items(), key=lambda x: x[1], reverse=True)
