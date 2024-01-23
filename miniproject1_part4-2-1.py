@@ -29,8 +29,15 @@ def cosine_similarity(x, y):
     # Return exponentiated cosine similarity
     return exp_cosine_similarity
 
-# Calculate exponentiated cosine similarity for example vectors
-cosine_similarity(x, y)
+if 'text_search' in st.session_state:
+    # Here, you need to define x and y based on your application logic.
+    # For now, I'm using placeholder random vectors for demonstration.
+    x = np.random.rand(10)  # Replace with your actual data
+    y = np.random.rand(10)  # Replace with your actual data
+
+    # Calculate cosine similarity for example vectors
+    result = cosine_similarity(x, y)
+    st.write("Cosine Similarity:", result)
     
 
 # Function to Load Glove Embeddings
@@ -46,8 +53,8 @@ def get_model_id_gdrive(model_type):
         word_index_id = "13qMXs3-oB9C6kfSRMwbAtzda9xuAUtt8"
         embeddings_id = "1-RXcfBvWyE-Av3ZHLcyJVsps0RYRRr_2"
     elif model_type == "50d":
-        embeddings_id = "1DBaVpJsitQ1qxtUvV1Kz7ThDc3az16kZ"
-        word_index_id = "1rB4ksHyHZ9skes-fJHMa2Z8J1Qa7awQ9"
+        embeddings_id = "1J-mbvwP_XiNdhzIMjufW7-NW1hueU5CC"
+        word_index_id = "1F0i_wCuTI2M632VCV-Oa2xM7rZiTC08X"
     elif model_type == "100d":
         word_index_id = "1-oWV0LqG3fmrozRZ7WB1jzeTJHRUI3mq"
         embeddings_id = "1SRHfX130_6Znz7zbdfqboKosz-PfNvNp"
